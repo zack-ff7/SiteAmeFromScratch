@@ -13,7 +13,36 @@
  */
 class UserManager extends Model{
     
-    public function ();
+    function logIn($login,$password)
+    {
+        
+    }
+    
+    function SignUp($login,$password,$testpass,$mail,$testmail,$nom,$prenom,$dateNaissance,$statut)
+    {
+        if($password==$testpass)
+        {
+            if($mail==$testmail)
+                
+            {
+                
+                $hash=  sha1($password);
+                $sql='INSERT INTO user (Id,Password,Nom,Prenom,Email,Statut,date_naissance) VALUES (?,?,?,?,?,?,?);';
+                $this->executerRequete($sql,array($login,$password,$nom,$prenom,$mail,$statut,$dateNaissance));
+               
+                return 0;
+            }
+            else
+            {
+                return 1;
+            }
+        }
+        else
+        {
+            
+            return 2;
+        }
+    }
     
     
 }
