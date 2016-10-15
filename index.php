@@ -1,5 +1,4 @@
 <?php
-
 include('Model/Model.php');
 include('Model/UserManager.php');
 
@@ -9,14 +8,11 @@ $Us=new UserManager();
 if (isset($_GET['page'])) {
     switch ($_GET['page']) {
         case 'creation' :
-
-
-
             if (isset($_POST['inscription'])) {
                 $result = $Us->SignUp($_POST['log'], $_POST['pass'], $_POST['verifpass'], $_POST['mail'], $_POST['verifmail'], $_POST['nom'], $_POST['prenom'], $_POST['dateNaiss'],1);
                 switch ($result) {
                     case 0:
-                        $Message = "Creation r�ussie ! ";
+                        $Message = "Creation réussie ! ";
                         include('Views/succes.php');
                         break;
                     case 1 :
@@ -34,7 +30,32 @@ if (isset($_GET['page'])) {
             break;
 
         case 'connexion':
-            include('Views/connexion.php');
+            if(isset($_POST['connect']))
+            {
+                $result=$Us->logIn($_POST['login'], $_POST['lepass']);
+                $res=$Us->detailUser($_POST['login']);
+                switch ($result) {
+                    case 0:
+                        $Message = "Connexion Réussie. ";
+                        $_SESSION['log']=$res['Id'];
+                        include('Views/succes.php');
+                        break;
+                    case 1 :
+                        $Message = "Pas d'identifiants, vous n'êtes surement pas inscrit.";
+                        include('Views/connexion.php');
+                        break;
+                    case 2 :
+                        $Message = "Mot de passe incorrect";
+                        include('Views/connexion.php');
+                        break;
+                }
+                
+            }
+            else
+            {
+                include('Views/connexion.php');
+                
+            }
             break;
 
         case 'clubs' :
