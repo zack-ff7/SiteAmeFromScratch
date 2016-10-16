@@ -24,12 +24,13 @@ class UserManager extends Model{
          }
          else
          {
-             if($var['Password']==sha1($password))
+             if($var['Password']==$password)
              {
                  return 0;
              }
              else
              {
+                 
                  return 2;
              }
          }
@@ -44,7 +45,7 @@ class UserManager extends Model{
                 
             {
                 
-                $hash=  sha1($password);
+                $hash= sha1($password);
                 $sql='INSERT INTO user (Id,Password,Nom,Prenom,Email,Statut,date_naissance) VALUES (?,?,?,?,?,?,?);';
                 $this->executerRequete($sql,array($login,$hash,$nom,$prenom,$mail,$statut,$dateNaissance));
                

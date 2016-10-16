@@ -10,6 +10,9 @@ if (isset($_GET['page'])) {
         case 'creation' :
             if (isset($_POST['inscription'])) {
                 $result = $Us->SignUp($_POST['log'], $_POST['pass'], $_POST['verifpass'], $_POST['mail'], $_POST['verifmail'], $_POST['nom'], $_POST['prenom'], $_POST['dateNaiss'],1);
+                echo $result;
+
+
                 switch ($result) {
                     case 0:
                         $Message = "Creation réussie ! ";
@@ -34,10 +37,18 @@ if (isset($_GET['page'])) {
             {
                 $result=$Us->logIn($_POST['login'], $_POST['lepass']);
                 $res=$Us->detailUser($_POST['login']);
+                    
                 switch ($result) {
                     case 0:
                         $Message = "Connexion Réussie. ";
+                        session_start();
                         $_SESSION['log']=$res['Id'];
+                        $_SESSION['Mail']=$res['Email'];
+                        $_SESSION['Statut']=$res['Statut'];
+                        $_SESSION['Nom']=$res['Nom'];
+                        $_SESSION['Prenom']=$res['Prenom'];
+                        $CONNEXION=true;
+                        
                         include('Views/succes.php');
                         break;
                     case 1 :

@@ -7,8 +7,9 @@
     </head>
     <body>
 <?php
-if (isset($_SESSION['log'])) {
-    echo '<a id="boutonco" href="#">Deconnexion</a>';
+if (isset($CONNEXION)) {
+    echo '<div id="user"><a id="boutonco" href="#">Deconnexion</a></div>';
+    echo $_SESSION['Nom'];()
 } else {
     echo '<a id="boutonco" href="';
     echo "index.php?page=connexion";
