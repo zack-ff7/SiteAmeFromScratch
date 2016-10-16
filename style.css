@@ -29,7 +29,7 @@ html,body{
     border-top: 2px solid black;
     border-bottom: 2px solid black;
     display: flex;
-    
+
 }
 
 .navBar a{
@@ -41,6 +41,10 @@ html,body{
     background-color: red;
     color: white;
     flex: 1;
+}
+
+.navLeft h1{
+    font-size: 20px;
 }
 
 .navMenu{
@@ -55,6 +59,9 @@ html,body{
 .navMenu a{
     width: 12.5%;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     text-decoration: none;
     background-color: white;
     border: 2px solid black;
@@ -78,7 +85,7 @@ html,body{
 }
 
 #searchBar{
-    
+
 }
 
 #formSearch{
@@ -138,7 +145,7 @@ html,body{
 
 .content{
     background-color: red;
-    min-width: 360px;
+    min-width: 750px;
     border-left: 4px solid black;
     border-right: 4px solid black;
     border-bottom: 4px solid black;
