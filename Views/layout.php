@@ -8,16 +8,19 @@
 
     <body>
 
-        <div class="header">header
-            <?php
-            if (isset($_SESSION['log'])) {
-                echo '<a class="boutonco" href="#">Deconnexion</a>';
-            } else {
-                echo '<a class="boutonco" href="';
-                echo "index.php?page=connexion";
-                echo '"> Connexion </a>';
-            }
-            ?>
+        <div class="header">
+            <div class="headerMenu">
+                <?php
+                if (isset($_SESSION['log'])) {
+                    echo '<a class="boutonco" href="#">Deconnexion</a>';
+                } else {
+                    echo '<a class="boutonco" href="';
+                    echo "index.php?page=connexion";
+                    echo '"> Connexion </a>';
+                }
+                ?>
+            </div>
+
         </div>
 
         <div class="navBar">
