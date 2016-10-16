@@ -7,7 +7,6 @@
     </head>
 
     <body>
-
         <div class="header">
             <div class="headerMenu">
                 <?php
@@ -20,7 +19,6 @@
                 }
                 ?>
             </div>
-
         </div>
 
         <div class="navBar">
@@ -41,15 +39,14 @@
                 </form>
             </div>
         </div>
-
+        
         <div class="main">
             <div class="left-side"></div>
-            <div class="content">content<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div>
+            <div class="content"> <?php echo($content); ?> </div>
             <div class="right-side"></div>
         </div>
-
+        
         <div class="footer">footer<br><br></div>
-
     </body>
 </html>
 

@@ -84,10 +84,6 @@ html,body{
     flex: 1;
 }
 
-#searchBar{
-
-}
-
 #formSearch{
     display: flex;
     justify-content: flex-end;
@@ -104,6 +100,7 @@ html,body{
     margin-top: 4px;
     margin-left: 4px;
     margin-bottom: 4px;
+    margin-right: 4px;
 }
 
 #search{
@@ -144,6 +141,7 @@ html,body{
 }
 
 .content{
+    min-height: 600px;
     background-color: red;
     min-width: 750px;
     border-left: 4px solid black;
@@ -166,4 +164,3 @@ html,body{
     background-color: red;
     margin-top: 20px;
 }
-
