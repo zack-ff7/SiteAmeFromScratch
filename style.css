@@ -58,26 +58,50 @@ html,body{
     display: block;
 }
 
+.navMenu a:hover{
+    background: grey;
+}
+
 .navRight{
     background-color: red;
     flex: 1;
 }
 
-.searchBar{
-    float: left;
-    display: inline-block;
-}
-
-.formSearch{
-    display: inline-block;
-}
-
-.recherche{
+#searchBar{
     
 }
 
-.search{
-    overflow: scroll;
+#formSearch{
+    display: flex;
+    justify-content: flex-end;
+    align-content: space-around;
+    flex-wrap: wrap;
+}
+
+#recherche{
+    width: 40%;
+    min-width: 80px;
+    padding: 8px 4px;
+    border: 1px solid black;
+    border-radius: 20px;
+    margin-top: 4px;
+    margin-left: 4px;
+    margin-bottom: 4px;
+}
+
+#search{
+    width: 40%;
+    min-width: 80px;
+    padding: 8px 4px;
+    border: 1px solid black;
+    border-radius: 3px;
+    color: black;
+    text-overflow: clip;
+    background: white;
+    margin-left: 4px;
+    margin-right: 10px;
+    margin-top: 4px;
+    margin-bottom: 4px;
 }
 
 .boutonco{
@@ -99,7 +123,7 @@ html,body{
 
 .left-side{
     height: inherit;
-    background-image: url("assets/images/sideImg.png");
+    background-image: url("assets/images/sideImg.jpg");
     background-color: white;
     flex: 1;
 }
@@ -114,7 +138,7 @@ html,body{
 
 .right-side{
     height: inherit;
-    background-image: url("assets/images/sideImg.png");
+    background-image: url("assets/images/sideImg.jpg");
     background-color: white;
     flex: 1;
 }
