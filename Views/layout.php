@@ -36,11 +36,9 @@
                 <a href="index.php?page=discipline">Contact</a>
             </div>
             <div class="navRight">
-                <div id="searchbar">
-                    <form id="formSearch" name="search" method="POST">
-                        <input id="recherche" type="text"/><button id ="search" name="search">Rechercher</button>
-                    </form>
-                </div>
+                <form id="formSearch" name="search" method="POST">
+                    <input id="recherche" type="text"/><button id ="search" name="search">Rechercher</button>
+                </form>
             </div>
         </div>
 
