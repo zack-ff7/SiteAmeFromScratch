@@ -7,17 +7,18 @@
     </head>
 
     <body>
-        <?php
-        if (isset($_SESSION['log'])) {
-            echo '<a class="boutonco" href="#">Deconnexion</a>';
-        } else {
-            echo '<a class="boutonco" href="';
-            echo "index.php?page=connexion";
-            echo '"> Connexion </a>';
-        }
-        ?>
 
-        <div class="header">header</div>
+        <div class="header">header
+            <?php
+            if (isset($_SESSION['log'])) {
+                echo '<a class="boutonco" href="#">Deconnexion</a>';
+            } else {
+                echo '<a class="boutonco" href="';
+                echo "index.php?page=connexion";
+                echo '"> Connexion </a>';
+            }
+            ?>
+        </div>
 
         <div class="navBar">
             <div class="navLeft">A.M.E</div>
@@ -29,7 +30,7 @@
                 <a href="index.php?page=events">Evenements</a>
                 <a href="index.php?page=photo">Albums Photo</a>
                 <a href="index.php?page=liens">Liens Utiles</a>
-                <a href="index.php?page=discipline">Nous contacter</a>
+                <a href="index.php?page=discipline">Contact</a>
             </div>
             <div class="navRight">
                 <div id="searchbar">
@@ -41,9 +42,9 @@
         </div>
 
         <div class="main">
-            <div class="left-side">  image cote gauche</div>
+            <div class="left-side"></div>
             <div class="content">content<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div>
-            <div class="right-side"> image cote droit</div>
+            <div class="right-side"></div>
         </div>
 
         <div class="footer">footer<br><br></div>
