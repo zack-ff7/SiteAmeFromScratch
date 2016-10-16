@@ -2,6 +2,7 @@
 include('Model/Model.php');
 include('Model/UserManager.php');
 
+<<<<<<< HEAD
 $Us=new UserManager();
 
 
@@ -67,6 +68,17 @@ if (isset($_GET['page'])) {
                 include('Views/connexion.php');
                 
             }
+=======
+if (isset($_GET['page'])) {
+    switch ($_GET['page']) {
+        case 'creation' :
+
+            include('Views/creation.php');
+            break;
+
+        case 'connexion':
+            include('Views/connexion.php');
+>>>>>>> origin/master
             break;
 
         case 'clubs' :
