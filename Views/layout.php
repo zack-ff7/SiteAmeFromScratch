@@ -7,20 +7,6 @@
     </head>
 
     <body>
-<<<<<<< HEAD
-<?php
-if (isset($CONNEXION)) {
-    echo '<div id="user"><a id="boutonco" href="#">Deconnexion</a></div>';
-    echo $_SESSION['Nom'];()
-} else {
-    echo '<a id="boutonco" href="';
-    echo "index.php?page=connexion";
-    echo '"> Connexion </a>';
-}
-?>
-       
-            <div id="navbar">
-=======
         <div class="header">
             <div class="headerMenu">
                 <?php
@@ -34,7 +20,6 @@ if (isset($CONNEXION)) {
                 ?>
             </div>
         </div>
->>>>>>> origin/master
 
         <div class="navBar">
             <div class="navLeft"><h1>A.M.E</h1></div>
