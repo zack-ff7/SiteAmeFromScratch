@@ -5,22 +5,9 @@
         <link  rel="stylesheet" type="text/css" href="style.css" />
         <title> <?php echo $title ?> </title>	
     </head>
-
-    <body>
-<<<<<<< HEAD
-<?php
-if (isset($CONNEXION)) {
-    echo '<div id="user"><a id="boutonco" href="#">Deconnexion</a></div>';
-    echo $_SESSION['Nom'];()
-} else {
-    echo '<a id="boutonco" href="';
-    echo "index.php?page=connexion";
-    echo '"> Connexion </a>';
-}
-?>
-       
+    <body>       
             <div id="navbar">
-=======
+
         <div class="header">
             <div class="headerMenu">
                 <?php
@@ -34,7 +21,7 @@ if (isset($CONNEXION)) {
                 ?>
             </div>
         </div>
->>>>>>> origin/master
+
 
         <div class="navBar">
             <div class="navLeft"><h1>A.M.E</h1></div>
@@ -44,7 +31,7 @@ if (isset($CONNEXION)) {
                 <a href="index.php?page=clubs">Les Clubs</a>
                 <a href="index.php?page=programme">Le Programme</a>
                 <a href="index.php?page=events">Evenements</a>
-                <a href="index.php?page=photo">Albums Photo</a>
+                <a href="index.php?page=album">Albums Photo</a>
                 <a href="index.php?page=liens">Liens Utiles</a>
                 <a href="index.php?page=discipline">Contact</a>
             </div>
@@ -62,6 +49,7 @@ if (isset($CONNEXION)) {
         </div>
         
         <div class="footer">footer<br><br></div>
+            </div>
     </body>
 </html>
 
