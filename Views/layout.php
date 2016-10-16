@@ -24,17 +24,17 @@
             <div class="navMenu">
                 <a href="index.php">Accueil</a>
                 <a href="index.php?page=discipline">La Discipline</a>
-                <a href="index.php?page=clubs"> Les Clubs </a>
-                <a href="index.php?page=programme"> Le Programme</a>
-                <a href="index.php?page=events"> Evenements </a>
-                <a href="index.php?page=photo"> Albums Photo</a>
-                <a href="index.php?page=liens"> Liens Utiles </a>
-                <a href="index.php?page=discipline"> Nous contacter</a>
+                <a href="index.php?page=clubs">Les Clubs</a>
+                <a href="index.php?page=programme">Le Programme</a>
+                <a href="index.php?page=events">Evenements</a>
+                <a href="index.php?page=photo">Albums Photo</a>
+                <a href="index.php?page=liens">Liens Utiles</a>
+                <a href="index.php?page=discipline">Nous contacter</a>
             </div>
             <div class="navRight">
                 <div id="searchbar">
                     <form id="formSearch" name="search" method="POST">
-                        <input id="recherche" type="text"/><button id ="search" name="search">R</button>
+                        <input id="recherche" type="text"/><button id ="search" name="search">Rechercher</button>
                     </form>
                 </div>
             </div>
@@ -42,7 +42,7 @@
 
         <div class="main">
             <div class="left-side">  image cote gauche</div>
-            <div class="content">content<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div>
+            <div class="content">content<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div>
             <div class="right-side"> image cote droit</div>
         </div>
 
