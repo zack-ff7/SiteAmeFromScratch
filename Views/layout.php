@@ -16,7 +16,7 @@
             <div class="headerMenu">
                 <?php
                 if (isset($_SESSION['log'])) {
-                    echo '<a class="boutonco" href="#">Deconnexion</a>';
+                    echo '<a class="boutonco" href="index.php?page=deconnexion">Deconnexion</a>';
                 } else {
                     echo '<a class="boutonco" href="';
                     echo "index.php?page=connexion";

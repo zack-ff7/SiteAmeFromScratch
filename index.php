@@ -96,6 +96,10 @@ if (isset($_GET['page'])) {
         case 'album' :
             include('Views/albums.php');
             break;
+        case 'deconnexion':
+            include('Views/deconnexion.php');
+            break;
+            
     }
 } else {
     include('Views/accueil.php');
