@@ -1,6 +1,6 @@
 <?php
-<<<<<<< HEAD
 
+session_start();
 include('Model/Model.php');
 include('Model/UserManager.php');
 
@@ -30,8 +30,11 @@ if (isset($_GET['page'])) {
                         include('Views/creation.php');
                         break;
                 }
+            } else {
+                include('Views/creation.php');
             }
             break;
+
 
         case 'connexion':
             if (isset($_POST['connect'])) {
@@ -41,7 +44,6 @@ if (isset($_GET['page'])) {
                 switch ($result) {
                     case 0:
                         $Message = "Connexion Réussie. ";
-                        session_start();
                         $_SESSION['log'] = $res['Id'];
                         $_SESSION['Mail'] = $res['Email'];
                         $_SESSION['Statut'] = $res['Statut'];
@@ -60,20 +62,12 @@ if (isset($_GET['page'])) {
                         include('Views/connexion.php');
                         break;
                 }
+            } else {
+                include('Views/connexion.php');
             }
-=======
-
-if (isset($_GET['page'])) {
-    switch ($_GET['page']) {
-        case 'creation' :
-
-            include('Views/creation.php');
             break;
 
-        case 'connexion':
->>>>>>> origin/master
-            include('Views/connexion.php');
-            break;
+
         case 'clubs' :
             include('Views/clubs.php');
             break;
@@ -104,6 +98,6 @@ if (isset($_GET['page'])) {
             break;
     }
 } else {
-    include('Views/connexion.php');
+    include('Views/accueil.php');
 }
-
+?>

@@ -2,6 +2,6 @@
 
 $title="Succès ! ";
 
-$content='<p>'.$message.'<p>';
+$content='<p>'.$Message.'<p>';
 
 include("Views/layout.php");

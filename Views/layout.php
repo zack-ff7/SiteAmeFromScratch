@@ -5,7 +5,11 @@
         <link  rel="stylesheet" type="text/css" href="style.css" />
         <title> <?php echo $title ?> </title>	
     </head>
-    <body>       
+
+    <body>
+
+
+       
             <div id="navbar">
 
         <div class="header">
@@ -21,7 +25,6 @@
                 ?>
             </div>
         </div>
-
 
         <div class="navBar">
             <div class="navLeft"><h1>A.M.E</h1></div>
