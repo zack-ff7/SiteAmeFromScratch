@@ -12,14 +12,16 @@ ob_start();
     <label>Prenom <input type="text" name="prenom"/></label><br>
     <label>Email <input type="text" name="mail" /></label><br>
     <label>Email <input type="text" name="verifmail" /></label><br>
-    <label>Date de naissance <input type="date" name="dateNaiss" /></label><br>
     <button> <input type="submit" name="inscription"/></button><br>
     
 </form>
 
 <?php
 
-
+if (isset($message))
+{
+    echo '<p>'.$message.'<p>';
+}
 
 
 $content=  ob_get_clean();

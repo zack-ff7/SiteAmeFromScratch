@@ -1,4 +1,5 @@
 <?php
+<<<<<<< HEAD
 
 include('Model/Model.php');
 include('Model/UserManager.php');
@@ -60,6 +61,17 @@ if (isset($_GET['page'])) {
                         break;
                 }
             }
+=======
+
+if (isset($_GET['page'])) {
+    switch ($_GET['page']) {
+        case 'creation' :
+
+            include('Views/creation.php');
+            break;
+
+        case 'connexion':
+>>>>>>> origin/master
             include('Views/connexion.php');
             break;
         case 'clubs' :

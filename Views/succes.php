@@ -1,7 +1,7 @@
 <?php
 
-$title="Succès ! ";
+$title="SuccÃ¨s ! ";
 
-$content='<p>'.$Message.'<p>';
+$content='<p>'.$message.'<p>';
 
 include("Views/layout.php");
