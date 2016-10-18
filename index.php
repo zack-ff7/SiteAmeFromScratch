@@ -50,6 +50,7 @@ if (isset($_GET['page'])) {
                         $_SESSION['Nom'] = $res['Nom'];
                         $_SESSION['Prenom'] = $res['Prenom'];
                         $CONNEXION = true;
+                        $STATUT=$_SESSION['Statut'];
 
                         include('Views/succes.php');
                         break;
@@ -98,6 +99,10 @@ if (isset($_GET['page'])) {
             break;
         case 'deconnexion':
             include('Views/deconnexion.php');
+            break;
+        
+        case 'administration':
+            include('Views/administration.php');
             break;
             
     }
