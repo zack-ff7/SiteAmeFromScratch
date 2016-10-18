@@ -103,7 +103,7 @@ if (isset($_GET['page'])) {
             include('Views/administration.php');
             break;
         case 'members':
-            $var=$Us->allUser(0);//Utlisateurs validés
+            $var=$Us->allUser(1);//Utlisateurs validés
             $var2=$Us->allUser(-1);//Utilisateurs non validés
             include ('Views/members.php');
             break;

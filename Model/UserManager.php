@@ -7,7 +7,7 @@
  */
 
 /**
- * Description of UserManager
+ * Classe Model Utilisateur 
  *
  * @author Armand
  */
@@ -76,6 +76,13 @@ class UserManager extends Model{
          $sql='SELECT * FROM user WHERE Statut=?';
          $data=$this->executerRequete($sql,array($statut));
          return $data;
+     }
+     
+     function validUser($login,$newStatut)
+     {
+         $sql='UPDATE user SET Statut=? WHERE Id=?';
+         $this->executerRequete($sql,array($login,$newStatut));
+         
      }
      
     

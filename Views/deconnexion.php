@@ -10,7 +10,7 @@ ob_start();
 session_destroy();
 $content=  ob_get_clean();
 include('Views/layout.php');
-sleep(5);
 header('Location: index.php');
+sleep(5);
 
 ?>
