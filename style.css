@@ -175,16 +175,43 @@ html,body{
     margin-top: 20px;
 }
 
-#connection form{
+#connectionPanel{
     display: flex;
+    flex-direction: column;
     width: 40%;
     justify-content: center;
     border: 2px solid black;
+    border-radius: 20px;
     background-color: white;
     padding: 10px 10px;
     
 }
 
+#connectionPanel form{
+    display: flex;
+    flex-direction: column;
+}
+
 #connection label{
+    display: flex;
+    justify-content: center;
     padding: 5px;
+}
+
+#connectionPanel input{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#connectionPanel button{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#connectionPanelNew{
+    display: flex;
+    justify-content: center;
 }
