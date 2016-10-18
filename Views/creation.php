@@ -1,29 +1,36 @@
 <?php
-
-$title="Creer un compte";
+$title = "Creer un compte";
 ob_start();
-
 ?>
-<form method="POST">
-    <label>Login <input type="text" name="log" /></label><br>
-    <label>Mot de passe <input type="password" name="pass"/></label><br>
-    <label>Retapez le mot de passe<input type="password" name="verifpass"/></label><br>
-    <label>Nom <input type="text" name="nom"/></label><br>
-    <label>Prenom <input type="text" name="prenom"/></label><br>
-    <label>Email <input type="text" name="mail" /></label><br>
-    <label>Email <input type="text" name="verifmail" /></label><br>
-    <button> <input type="submit" name="inscription"/></button><br>
-    
+
+<div id="creation">
+    <div id="creationPanel">
+        <form method="POST">
+            <label>Login</label>
+            <input type="text" name="log" />
+            <label>Mot de passe</label>
+            <input type="password" name="pass"/>
+            <label>Retapez le mot de passe</label>
+            <input type="password" name="verifpass"/>
+            <label>Nom</label>
+            <input type="text" name="nom"/>
+            <label>Prenom</label>
+            <input type="text" name="prenom"/>
+            <label>Email</label>
+            <input type="text" name="mail" />
+            <label>Comfirmer Email</label>
+            <input type="text" name="verifmail" />
+            <button type="submit" name="inscription"/>S'inscrire</button>
+    </div>
 </form>
+</div>
 
 <?php
-
-if (isset($message))
-{
-    echo '<p>'.$message.'<p>';
+if (isset($message)) {
+    echo '<p>' . $message . '<p>';
 }
 
-
-$content=  ob_get_clean();
+$content = ob_get_clean();
 include("Views/layout.php");
-    
+?>
+

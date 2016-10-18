@@ -215,3 +215,33 @@ html,body{
     display: flex;
     justify-content: center;
 }
+
+#creation{
+    width: inherit;
+    height: inherit;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#creationPanel{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    justify-content: center;
+    border: 2px solid black;
+    border-radius: 20px;
+    background-color: white;
+    padding: 10px 10px;
+}
+
+#creationPanel form{
+    display: flex;
+    flex-direction: column;
+}
+
+#creationPanel label{
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+}
