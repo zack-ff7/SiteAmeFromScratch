@@ -7,11 +7,7 @@
     </head>
 
     <body>
-
-
-
         <div id="navbar">
-
             <div class="header">
                 <div class="headerMenu">
                     <?php
