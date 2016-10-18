@@ -1,5 +1,4 @@
 <?php
-
 session_start();
 include('Model/Model.php');
 include('Model/UserManager.php');
@@ -51,7 +50,6 @@ if (isset($_GET['page'])) {
                         $_SESSION['Prenom'] = $res['Prenom'];
                         $CONNEXION = true;
                         $STATUT=$_SESSION['Statut'];
-
                         include('Views/succes.php');
                         break;
                     case 1 :
