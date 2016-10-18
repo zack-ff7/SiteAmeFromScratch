@@ -71,21 +71,14 @@ class UserManager extends Model{
           return $var;
      }
      
-     function allValidatedUser()
+     function allUser($statut)
      {
-         $sql='SELECT * FROM user WHERE Statut='/0/'';
-          $data=$this->executerRequete($sql);
-          $var=$data->fetch();
-          return $var;
+         $sql='SELECT * FROM user WHERE Statut=?';
+         $data=$this->executerRequete($sql,array($statut));
+         return $data;
      }
      
-     function notValidatedUser()
-     {
-         $sql='SELECT * FROM user WHERE Statut='/-1/'';
-          $data=$this->executerRequete($sql);
-          $var=$data->fetch();
-          return $var;
-     }
+    
     
     
 }

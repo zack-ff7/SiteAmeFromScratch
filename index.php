@@ -102,6 +102,11 @@ if (isset($_GET['page'])) {
         case 'administration':
             include('Views/administration.php');
             break;
+        case 'members':
+            $var=$Us->allUser(0);//Utlisateurs validés
+            $var2=$Us->allUser(-1);//Utilisateurs non validés
+            include ('Views/members.php');
+            break;
             
     }
 } else {
