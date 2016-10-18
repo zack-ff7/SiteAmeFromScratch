@@ -14,9 +14,9 @@
         </div>
         <div class="headerMenu">
                 <?php
-                if (isset($CONNEXION)) {
+                if (isset($_SESSION['log'])) {
                     echo '<a class="boutonco" href="index.php?page=deconnexion">Deconnexion</a>';
-                    if ($STATUT == 1) {
+                    if ($_SESSION['Statut'] == 1) {
                         echo '<a class="boutonco" href="index.php?page=administration">Administration</a>';
                     }
                 } else {
