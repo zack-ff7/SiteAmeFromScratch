@@ -12,10 +12,10 @@
  * @author Armand
  */
 class ClubManager extends Model{
-    function nouveauClub($nomClub,$detailclub)
+    function nouveauClub($nomClub)
     {
-        $sql='INSERT INTO club (nom_club,detail_club) VALUES (?,?)';
-        $this->executerRequete($sql,array($nomClub,$detailclub));  
+        $sql='INSERT INTO club (nom_club) VALUES (?)';
+        $this->executerRequete($sql,array($nomClub));  
     }
     
     function effacerClub($nomClub)

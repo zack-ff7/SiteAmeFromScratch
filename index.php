@@ -2,8 +2,9 @@
 session_start();
 include('Model/Model.php');
 include('Model/UserManager.php');
+include('Model/ClubManager.php');
 
-
+$Club=new ClubManager();
 $Us = new UserManager();
 
 
@@ -68,7 +69,26 @@ if (isset($_GET['page'])) {
 
 
         case 'clubs' :
+            if(isset($_GET['club']))
+            {
+               include('Views/clubs/'.$_GET['club']);
+            }
+            else
+            {
+            $data=$Club->afficherClubs();
+            if(isset($_POST['valider']))
+            {
+                $Club->nouveauClub($_POST['nom']);
+                $nomVue='Views/clubs/'.$_POST['nom'];
+                $lavue=fopen($nomVue,'x+');
+                
+                fputs($lavue,$str, $length);
+                
+            }
+            else
+            {
             include('Views/clubs.php');
+            }}
             break;
 
         case 'contact':
