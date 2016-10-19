@@ -12,7 +12,7 @@ if (isset($_SESSION['log']) && $_SESSION['Statut'] == 1) {
 
 
 foreach ($data as $ligne) {
-    echo '<div><a href="index.php?page=club&club='. $ligne['nom_club'] . '">' . $ligne['nom_club'] . '</a></div>';
+    echo '<div><a href="index.php?page=clubs&club='. $ligne['nom_club'] . '">' . $ligne['nom_club'] . '</a></div>';
 }
 
 $content = ob_get_clean();

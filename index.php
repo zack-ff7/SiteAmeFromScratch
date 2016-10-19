@@ -71,7 +71,7 @@ if (isset($_GET['page'])) {
         case 'clubs' :
             if(isset($_GET['club']))
             {
-               include('Views/clubs/'.$_GET['club']);
+               include('Views/clubs/'.$_GET['club'].'.php');
             }
             else
             {
