@@ -9,7 +9,8 @@
     <body>
         <div class="header">
             <div class="headerTitle">
-                <img src="assets/images/libellule.png" alt="libellule"><h1>Aikido Mouvement Evasion</h1>
+                <div id="headerImage"><img src="assets/images/libellule.png" alt="libellule"></div>
+                <div id="headerText"><h1>Aikido Mouvement Evasion</h1></div>
             </div>
         </div>
         <div class="headerMenu">

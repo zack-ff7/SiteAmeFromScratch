@@ -17,16 +17,28 @@ html,body{
 
 .headerTitle{
     display: flex;
+    height: 100px;
 }
 
-.headerTitle h1{
+#headerText{
+    margin-left: 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    border: 2px solid white;
+    background-color: rgba(74, 74, 74, 0.87);
+    padding: 10px;
+    border-radius: 30px;
+    color: white;
 }
 
-.headerTitle img{
-    
+#headerImage{
+    height: inherit;
+}
+
+#headerImage img{
+    height: 96px;
+    border: 2px solid white;
 }
 
 .headerMenu{
