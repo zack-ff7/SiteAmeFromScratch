@@ -1,10 +1,11 @@
 <?php
+
 session_start();
 include('Model/Model.php');
 include('Model/UserManager.php');
 include('Model/ClubManager.php');
 
-$Club=new ClubManager();
+$Club = new ClubManager();
 $Us = new UserManager();
 
 
@@ -50,7 +51,7 @@ if (isset($_GET['page'])) {
                         $_SESSION['Nom'] = $res['Nom'];
                         $_SESSION['Prenom'] = $res['Prenom'];
                         $CONNEXION = true;
-                        $STATUT=$_SESSION['Statut'];
+                        $STATUT = $_SESSION['Statut'];
                         include('Views/succes.php');
                         break;
                     case 1 :
@@ -69,26 +70,20 @@ if (isset($_GET['page'])) {
 
 
         case 'clubs' :
-            if(isset($_GET['club']))
-            {
-               include('Views/clubs/'.$_GET['club'].'.php');
+            if (isset($_GET['club'])) {
+                include('Views/clubs/' . $_GET['club'] . '.php');
+            } else {
+                $data = $Club->afficherClubs();
+                if (isset($_POST['valider'])) {
+                    $Club->nouveauClub($_POST['nom']);
+                    $nomVue = 'Views/clubs/' . $_POST['nom'];
+                    $lavue = fopen($nomVue, 'x+');
+
+                    fputs($lavue, $str, $length);
+                } else {
+                    include('Views/clubs.php');
+                }
             }
-            else
-            {
-            $data=$Club->afficherClubs();
-            if(isset($_POST['valider']))
-            {
-                $Club->nouveauClub($_POST['nom']);
-                $nomVue='Views/clubs/'.$_POST['nom'];
-                $lavue=fopen($nomVue,'x+');
-                
-                fputs($lavue,$str, $length);
-                
-            }
-            else
-            {
-            include('Views/clubs.php');
-            }}
             break;
 
         case 'contact':
@@ -118,18 +113,24 @@ if (isset($_GET['page'])) {
         case 'deconnexion':
             include('Views/deconnexion.php');
             break;
-        
+
         case 'administration':
             include('Views/administration.php');
             break;
         case 'members':
-            $var=$Us->allUser(1);//Utlisateurs validés
-            $var2=$Us->allUser(-1);//Utilisateurs non validés
+            $var = $Us->allUser(1); //Utlisateurs validés
+            $var2 = $Us->allUser(-1); //Utilisateurs non validés
             include ('Views/members.php');
             break;
-            
+        case 'editEvent':
+            include('Views/edito.php');
+            break;
     }
 } else {
+    if(isset($_POST['admin']))
+    {
+        include('assets/scriptckeditor.php');
+    }
     include('Views/accueil.php');
 }
 ?>

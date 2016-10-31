@@ -3,7 +3,9 @@
 
     <head>
         <link  rel="stylesheet" type="text/css" href="style.css" />
-        <title> <?php echo $title ?> </title>	
+        <title> <?php echo $title ?> </title>
+        <script src="ckeditor/ckeditor.js"></script>
+
     </head>
 
     <body>
@@ -14,19 +16,19 @@
             </div>
         </div>
         <div class="headerMenu">
-                <?php
-                if (isset($_SESSION['log'])) {
-                    echo '<a class="boutonco" href="index.php?page=deconnexion">Deconnexion</a>';
-                    if ($_SESSION['Statut'] == 1) {
-                        echo '<a class="boutonco" href="index.php?page=administration">Administration</a>';
-                    }
-                } else {
-                    echo '<a class="boutonco" href="';
-                    echo "index.php?page=connexion";
-                    echo '"> Connexion </a>';
+            <?php
+            if (isset($_SESSION['log'])) {
+                echo '<a class="boutonco" href="index.php?page=deconnexion">Deconnexion</a>';
+                if ($_SESSION['Statut'] == 1) {
+                    echo '<a class="boutonco" href="index.php?page=administration">Administration</a>';
                 }
-                ?>
-            </div>
+            } else {
+                echo '<a class="boutonco" href="';
+                echo "index.php?page=connexion";
+                echo '"> Connexion </a>';
+            }
+            ?>
+        </div>
 
         <div class="navBar">
             <div class="navLeft"><h1>A.M.E</h1></div>
@@ -49,7 +51,12 @@
 
         <div class="main">
             <div class="left-side"></div>
-            <div class="content"> <?php echo($content); ?> </div>
+            <div class="content" id="content"> <?php
+                echo($content);
+                if (isset($script)) {
+                    echo $script;
+                }
+                ?> </div>
             <div class="right-side"></div>
         </div>
 
