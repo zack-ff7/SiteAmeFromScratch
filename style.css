@@ -302,5 +302,7 @@ html,body{
 #editorDiscipline{
     width: 90%;
     background-color: white;
+    padding: 10px;
+    border-radius: 20px;
     
 }
