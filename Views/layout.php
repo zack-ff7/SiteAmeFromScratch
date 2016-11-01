@@ -5,7 +5,7 @@
         <link  rel="stylesheet" type="text/css" href="style.css" />
         <title> <?php echo $title ?> </title>
         <script src="ckeditor/ckeditor.js"></script>
-
+		<script type="text/javascript" src="form.js"></script>
     </head>
 
     <body>
