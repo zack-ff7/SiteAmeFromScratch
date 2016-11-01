@@ -31,7 +31,7 @@
         </div>
 
         <div class="navBar">
-            <div class="navLeft"><h1>A.M.E</h1></div>
+            <div class="navLeft"><img src="assets/images/symbole.png" alt="symbole"><h1>A.M.E</h1></div>
             <div class="navMenu">
                 <a href="index.php">Accueil</a>
                 <a href="index.php?page=discipline">La Discipline</a>
