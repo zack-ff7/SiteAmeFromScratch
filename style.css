@@ -286,11 +286,26 @@ html,body{
 }
 
 #lesClubs{
+    margin-top: 20px;
     display: flex;
+    justify-content: space-around;
 }
 
-#clubs{
-    width: 30%;
+
+
+.club{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 24%;
+    border-radius: 20px;
+    padding: 10px;
+    border: 2px solid black;
+    background-color: white;
+}
+
+.club img{
+    width: inherit;
 }
 
 #discipline{
