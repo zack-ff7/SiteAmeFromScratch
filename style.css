@@ -285,3 +285,10 @@ html,body{
     padding: 5px;
 }
 
+#lesClubs{
+    display: flex;
+}
+
+#clubs{
+    width: 30%;
+}
