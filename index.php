@@ -30,6 +30,11 @@ if (isset($_GET['page'])) {
                         $Message = "Les mots de passes ne sont pas identiques";
                         include('Views/creation.php');
                         break;
+                    case 3 : 
+                        $Message = "Remplissez tous les champs";
+                        include('Views/creation.php');
+                        break;
+                        
                 }
             } else {
                 include('Views/creation.php');
@@ -78,7 +83,7 @@ if (isset($_GET['page'])) {
                     $Club->nouveauClub($_POST['nom']);
                     $nomVue = 'Views/clubs/' . $_POST['nom'];
                     $lavue = fopen($nomVue, 'x+');
-
+                    
                     fputs($lavue, $str, $length);
                 } else {
                     include('Views/clubs.php');

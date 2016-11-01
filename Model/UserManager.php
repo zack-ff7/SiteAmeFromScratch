@@ -22,7 +22,7 @@ class UserManager extends Model{
           {
               return 1;
           }
-          else
+          else if($data!=null)
           {
               if($var['Password']==$password)
               {
@@ -34,6 +34,9 @@ class UserManager extends Model{
                   return 2;
               }
          }
+ else {
+     return 3;
+ }
           
      }
      
