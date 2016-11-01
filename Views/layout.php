@@ -21,6 +21,7 @@
                 echo '<a class="boutonco" href="index.php?page=deconnexion">Deconnexion</a>';
                 if ($_SESSION['Statut'] == 1) {
                     echo '<a class="boutonco" href="index.php?page=administration">Administration</a>';
+                    echo '<p class="nameco">Connect&eacute; en<br>tant que :<br>'.$_SESSION['log'].'</p>';
                 }
             } else {
                 echo '<a class="boutonco" href="';
