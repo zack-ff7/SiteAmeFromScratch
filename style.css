@@ -314,10 +314,38 @@ html,body{
     margin-top: 20px;
 }
 
+#programme{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#liens{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
 #editorDiscipline{
     width: 90%;
     background-color: white;
     padding: 10px;
     border-radius: 20px;
-    
+    border: 2px solid black;
+}
+
+#editorProgramme{
+    width: 90%;
+    background-color: white;
+    padding: 10px;
+    border-radius: 20px;
+    border: 2px solid black;
+}
+
+#editorLiens{
+    width: 90%;
+    background-color: white;
+    padding: 10px;
+    border-radius: 20px;
+    border: 2px solid black;
 }
