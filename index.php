@@ -19,19 +19,19 @@ if (isset($_GET['page'])) {
 
                 switch ($result) {
                     case 0:
-                        $Message = "Creation réussie ! ";
+                        $message = "Creation réussie ! ";
                         include('Views/succes.php');
                         break;
                     case 1 :
-                        $Message = "Les Mails ne sont pas identiques.";
+                        $message = "Les Mails ne sont pas identiques.";
                         include('Views/creation.php');
                         break;
                     case 2 :
-                        $Message = "Les mots de passes ne sont pas identiques";
+                        $message = "Les mots de passes ne sont pas identiques";
                         include('Views/creation.php');
                         break;
                     case 3 : 
-                        $Message = "Remplissez tous les champs";
+                        $message = "Remplissez tous les champs";
                         include('Views/creation.php');
                         break;
                         

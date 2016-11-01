@@ -20,9 +20,12 @@ ob_start();
             <input type="text" name="mail" />
             <label>Comfirmer Email</label>
             <input type="text" name="verifmail" />
-            <button type="submit" name="inscription"/>S'inscrire</button>
+            <label>Date de Naissance</label>
+            <input type="date" name="dateNaiss"/>
+            <button type="submit" name="inscription">S'inscrire</button>
+        </form>
     </div>
-</form>
+
 </div>
 
 <?php
