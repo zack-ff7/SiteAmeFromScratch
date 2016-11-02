@@ -29,8 +29,7 @@
  * @link      http://github.com/thibaud-rohmer/PhotoShow-v2
  */
 
-/// Start session
-session_start();
+
 
 /// Because we don't care about notices
 if(function_exists("error_reporting")){

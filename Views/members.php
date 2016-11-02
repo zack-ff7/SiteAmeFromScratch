@@ -12,8 +12,8 @@ foreach ($var as $ligne)
     echo '<td>'.$ligne['Prenom'].'</td>';
     echo '<td>'.$ligne['Email'].'</td>';
     echo '<td>'.$ligne['date_naissance'].'</td>';
-    echo '<button type="submit" name="valid'.$ligne['Id'].'">Valider</button>';
-    echo '</form></tr>';
+    echo '<td><button type="submit" name="valid'.$ligne['Id'].'">Valider</button></td>';
+    echo '</tr></form>';
 }
 ?>
 </table>

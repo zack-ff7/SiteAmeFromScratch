@@ -21,12 +21,13 @@ ob_start();
             <label>Comfirmer Email</label>
 
             <input type="text" name="verifmail" onkeypress="verifMail(this),verifEgal(mail,verifmail)"/>
-            <button type="submit" name="inscription" />S'inscrire</button>
+          
 
             <input type="text" name="verifmail" />
             <label>Date de Naissance</label>
             <input type="date" name="dateNaiss"/>
-            <button type="submit" name="inscription">S'inscrire</button>
+            <button type="submit" name="inscription" >S'inscrire</button>
+            
         </form>
 
     </div>

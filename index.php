@@ -5,11 +5,9 @@ include('Model/Model.php');
 include('Model/UserManager.php');
 include('Model/ClubManager.php');
 include('Model/ViewManager.php');
-include('Model/AlbumManager.php');
 
 $Club = new ClubManager();
 $Us = new UserManager();
-$Album=new AlbumManager();
 $View=new ViewManager();
 
 
@@ -116,16 +114,8 @@ if (isset($_GET['page'])) {
             include('Views/programme.php');
             break;
 
-        case 'album' :
-            $lesalbums=$Album->AfficherLesAlbums();
-            if(isset($_POST['envoyerAlb']))
-            {
-                $Album->ajouterAlbums($_POST['lenom']);
-                $message='Votre album est rajouté ! Remplissez le .';
-            }
-            
-            
-            include('Views/albums.php');
+        case 'album' :   
+            include('PhotoShow-master/index.php');  
             break;
         case 'deconnexion':
             include('Views/deconnexion.php');

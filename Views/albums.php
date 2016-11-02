@@ -7,7 +7,7 @@ if(isset($_SESSION['Statut']))
     echo 'Voici les albums photos';
     if(isset($_SESSION['log']))
     {
-        include('PhotoShow-master/index.php');  
+        
         
     }
     
