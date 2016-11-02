@@ -31,7 +31,7 @@
             } else {
                 echo '<a class="boutonco" href="';
                 echo "index.php?page=connexion";
-                echo '"> Connexion </a>';
+                echo '">Connexion</a>';
             }
             ?>
         </div>
@@ -46,7 +46,7 @@
                 <a href="index.php?page=events">Evenements</a>
                 <a href="index.php?page=album">Albums Photo</a>
                 <a href="index.php?page=liens">Liens Utiles</a>
-                <a href="index.php?page=discipline">Contact</a>
+                <a href="index.php?page=contact">Contact</a>
             </div>
             <div class="navRight">
                 <form id="formSearch" name="search" method="POST">
@@ -66,7 +66,7 @@
             <div class="right-side"></div>
         </div>
 
-        <div class="footer">footer<br><br></div>
+        <div class="footer"></div>
     </body>
 </html>
 
