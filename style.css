@@ -74,7 +74,7 @@ html,body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: red;
+    background-color: #B40404;
     color: white;
     flex: 1;
 }
@@ -121,7 +121,7 @@ html,body{
 }
 
 .navRight{
-    background-color: red;
+    background-color: #B40404;
     flex: 1;
 }
 
@@ -163,7 +163,7 @@ html,body{
     float: right;
     color: white;
     border: 2px solid black;
-    background-color: red;
+    background-color: #B40404;
     border-radius: 6px;
 }
 
@@ -171,7 +171,7 @@ html,body{
     float: right;
     color: white;
     border: 2px solid black;
-    background-color: red;
+    background-color: #B40404;
     border-radius: 6px;
 }
 
@@ -187,7 +187,7 @@ html,body{
     float: right;
     color: white;
     border: 2px solid black;
-    background-color: #81BEF7;
+    background-color: #0174DF;
     padding : 4px;
     border-radius: 6px;
 }
@@ -208,7 +208,7 @@ html,body{
 
 .content{
     min-height: 600px;
-    background-color: red;
+    background-color: #B40404;
     min-width: 750px;
     border-left: 4px solid black;
     border-right: 4px solid black;
@@ -228,7 +228,7 @@ html,body{
     height: 50px;
     width: 100%;
     display: block;
-    background-color: red;
+    background-color: #B40404;
     margin-top: 20px;
 }
 
