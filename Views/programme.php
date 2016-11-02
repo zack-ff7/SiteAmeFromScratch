@@ -21,10 +21,13 @@ ob_start();
         <?php
     } else {
         ?>
-        <textarea disabled="true" name="editorProgramme" id="editorProgramme"><?php if(isset($data))
-        {
-            echo $data;
-        }?></textarea>
+        <div id="editorProgramme">
+            <?php
+            if (isset($data)) {
+                echo $data;
+            }
+            ?>
+        </div>
         <?php
     }
     ?>

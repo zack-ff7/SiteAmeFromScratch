@@ -19,7 +19,13 @@ ob_start();
         <?php
     } else {
         ?>
-        <textarea disabled="true" name="editorLiens" id="editorLiens">texte a charger/sauvegarder</textarea>
+        <div id="editorLiens">
+            <?php
+            if (isset($data)) {
+                echo $data;
+            }
+            ?>
+        </div>
         <?php
     }
     ?>
