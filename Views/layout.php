@@ -5,7 +5,7 @@
         <link  rel="stylesheet" type="text/css" href="style.css" />
         <title> <?php echo $title ?> </title>
         <script src="ckeditor/ckeditor.js"></script>
-		<script type="text/javascript" src="form.js"></script>
+        <script type="text/javascript" src="form.js"></script>
     </head>
 
     <body>
@@ -21,7 +21,7 @@
                 echo '<a class="boutonco" href="index.php?page=deconnexion">Deconnexion</a>';
                 if ($_SESSION['Statut'] == 1) {
                     echo '<a class="boutonco" href="index.php?page=administration">Administration</a>';
-                    echo '<p class="nameco">Connect&eacute; en<br>tant que :<br>'.$_SESSION['log'].'</p>';
+                    echo '<p class="nameco">Connect&eacute; en<br>tant que :<br>' . $_SESSION['log'] . '</p>';
                 }
             } else {
                 echo '<a class="boutonco" href="';

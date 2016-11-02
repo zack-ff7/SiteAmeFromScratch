@@ -9,18 +9,23 @@ ob_start();
         ?>
         <textarea name="editorDiscipline" id="editorDiscipline">texte a charger/sauvegarder</textarea>
         <script>CKEDITOR.replace('editorDiscipline');</script>
+        <div id="editorMenu">
+            <button>Annuler modifications</button>
+            <button>Sauvegarder</button>
+        </div>
+
         <?php
     } else {
         ?>
-        <textarea name="editorDiscipline" id="editorDiscipline">texte a charger/sauvegarder</textarea>
+        <textarea disabled="true" name="editorDiscipline" id="editorDiscipline">texte a charger/sauvegarder</textarea>
         <?php
     }
     ?>
 </div>
-    <?php
-    $content = ob_get_contents();
-    ob_end_clean();
-    ?>
+<?php
+$content = ob_get_contents();
+ob_end_clean();
+?>
 
 <?php
 include("Views/layout.php");

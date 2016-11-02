@@ -9,10 +9,15 @@ ob_start();
         ?>
         <textarea name="editorLiens" id="editorLiens">texte a charger/sauvegarder</textarea>
         <script>CKEDITOR.replace('editorLiens');</script>
+        <div id="editorMenu">
+            <button>Annuler modifications</button>
+            <button>Sauvegarder</button>
+        </div>
+        
         <?php
     } else {
         ?>
-        <textarea name="editorLiens" id="editorLiens">texte a charger/sauvegarder</textarea>
+        <textarea disabled="true" name="editorLiens" id="editorLiens">texte a charger/sauvegarder</textarea>
         <?php
     }
     ?>

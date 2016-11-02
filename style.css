@@ -316,18 +316,24 @@ html,body{
 
 #discipline{
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
     margin-top: 20px;
 }
 
 #programme{
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
     margin-top: 20px;
 }
 
 #liens{
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
     margin-top: 20px;
 }
@@ -354,4 +360,28 @@ html,body{
     padding: 10px;
     border-radius: 20px;
     border: 2px solid black;
+}
+
+#cke_editorDiscipline{
+    width: 80%;
+}
+
+#cke_editorProgramme{
+    width: 80%;
+}
+
+#cke_editorLiens{
+    width: 80%;
+}
+
+#editorMenu{
+    width: 80%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#editorMenu button{
+    padding: 4px;
+    margin-top: 10px;
+    margin-left: 10px;
 }
