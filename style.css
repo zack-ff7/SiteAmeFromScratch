@@ -392,20 +392,7 @@ html,body{
     border: 2px solid black;
 }
 
-#cke_editorDiscipline{
-    width: 80%;
-}
-
-#cke_editorProgramme{
-    width: 80%;
-}
-
-#cke_editorLiens{
-    width: 80%;
-}
-
 #editorMenu{
-    width: 80%;
     display: flex;
     justify-content: flex-end;
 }

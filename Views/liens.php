@@ -7,13 +7,15 @@ ob_start();
     <?php
     if (isset($_SESSION['log']) && $_SESSION['Statut'] == 1) {
         ?>
-        <textarea name="editorLiens" id="editorLiens">texte a charger/sauvegarder</textarea>
-        <script>CKEDITOR.replace('editorLiens');</script>
-        <div id="editorMenu">
-            <button>Annuler modifications</button>
-            <button>Sauvegarder</button>
-        </div>
-        
+        <form>
+            <textarea name="editorLiens" id="editorLiens">texte a charger/sauvegarder</textarea>
+            <script>CKEDITOR.replace('editorLiens');</script>
+            <div id="editorMenu">
+                <button>Annuler modifications</button>
+                <button>Sauvegarder</button>
+            </div>
+        </form>
+
         <?php
     } else {
         ?>
@@ -22,10 +24,10 @@ ob_start();
     }
     ?>
 </div>
-    <?php
-    $content = ob_get_contents();
-    ob_end_clean();
-    ?>
+<?php
+$content = ob_get_contents();
+ob_end_clean();
+?>
 
 <?php
 include("Views/layout.php");
