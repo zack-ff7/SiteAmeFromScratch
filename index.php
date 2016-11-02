@@ -9,7 +9,6 @@ include('Model/ViewManager.php');
 $Club = new ClubManager();
 $Us = new UserManager();
 $View=new ViewManager();
-$_SESSION['editorMode'] = False;
 
 
 if (isset($_GET['page'])) {
@@ -58,6 +57,7 @@ if (isset($_GET['page'])) {
                         $_SESSION['Statut'] = $res['Statut'];
                         $_SESSION['Nom'] = $res['Nom'];
                         $_SESSION['Prenom'] = $res['Prenom'];
+                        $_SESSION['editorMode'] = False;
                         $CONNEXION = true;
                         $STATUT = $_SESSION['Statut'];
                         include('Views/succes.php');

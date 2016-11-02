@@ -7,9 +7,8 @@ ob_start();
 
     <?php
     foreach ($data as $ligne) {
-        //echo '<a class="clubs" href="index.php?page=clubs&club=' . $ligne['nom_club'] . '">' . $ligne['nom_club'] . '</a>';
         ?>
-    <a class="club" style="text-decoration:none; color: black;" href="index.php?page=clubs&club=<?php echo $ligne['nom_club']; ?>"> <img src="assets/images/clubs/<?php echo $ligne['nom_club']; ?>.jpg"><h1><?php echo $ligne['nom_club']; ?></h1><p>presentation rapide club blabla blabla bla blabla</p></a>
+        <a class="club" style="text-decoration:none; color: black;" href="index.php?page=clubs&club=<?php echo $ligne['nom_club']; ?>"> <img src="assets/images/clubs/<?php echo $ligne['nom_club']; ?>.jpg"><h1><?php echo $ligne['nom_club']; ?></h1><p>presentation rapide club blabla blabla bla blabla</p></a>
                 <?php
             }
             ?>
