@@ -9,6 +9,7 @@ include('Model/ViewManager.php');
 $Club = new ClubManager();
 $Us = new UserManager();
 $View=new ViewManager();
+$_SESSION['editorMode'] = False;
 
 
 if (isset($_GET['page'])) {

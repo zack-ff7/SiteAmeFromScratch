@@ -21,6 +21,11 @@
                 echo '<a class="boutonco" href="index.php?page=deconnexion">Deconnexion</a>';
                 if ($_SESSION['Statut'] == 1) {
                     echo '<a class="boutonco" href="index.php?page=administration">Administration</a>';
+                    if($_SESSION['editorMode'] == False){
+                        echo '<a class="boutonEditorFalse">Mode edition</a>';
+                    }else{
+                        echo '<a class="boutonEditorTrue">Mode visiteur</a>';
+                    }
                     echo '<p class="nameco">Connect&eacute; en<br>tant que :<br>' . $_SESSION['log'] . '</p>';
                 }
             } else {

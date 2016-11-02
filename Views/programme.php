@@ -1,5 +1,5 @@
 <?php
-$title = 'Le Prrogramme';
+$title = 'Le Programme';
 ob_start();
 ?>
 <div id="programme">
