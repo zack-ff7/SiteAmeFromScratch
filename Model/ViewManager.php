@@ -67,19 +67,18 @@ class ViewManager extends Model {
     
      
     function modifDiscipline($texte){
-        $sql='INSERT INTO vuediscipline (textpage) VALUES (?);';
-                $sql2='DELETE FROM vuediscipline;';
-                $this->executerRequete($sql2);
-                $this->executerRequete($sql);
+        $sql='UPDATE vuediscipline SET textpage=?;';
+                      
+                $this->executerRequete($sql,array($texte));
                 return 0;
     }
     
      
     function modifliens($texte){
-        $sql='INSERT INTO vueliens(textpage) VALUES (?);';
-                $sql2='DELETE FROM vueliens;';
+        $sql='INSERT INTO vueliens VALUES (?);';
+                $sql2='DELETE FROM vueliens';
                 $this->executerRequete($sql2);
-                $this->executerRequete($sql);
+                $this->executerRequete($sql,array($texte));
                 return 0;
     }
     

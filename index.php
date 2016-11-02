@@ -99,6 +99,13 @@ if (isset($_GET['page'])) {
             break;
 
         case 'discipline':
+            if(isset($_POST['vuedis']))
+            {
+                $View->modifDiscipline($_POST['editorDiscipline']);
+            }
+ else {
+        $data=$View->afficherDiscipline();
+ }
 
             include('Views/discipline.php');
             break;
