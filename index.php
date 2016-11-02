@@ -116,7 +116,7 @@ if (isset($_GET['page'])) {
             break;
 
         case 'album' :   
-            include('PhotoShow-master/index.php');  
+            include('Views/albums.php');  
             break;
         case 'deconnexion':
             include('Views/deconnexion.php');
