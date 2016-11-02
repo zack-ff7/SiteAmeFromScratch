@@ -337,7 +337,11 @@ html,body{
 }
 
 .club h1{
-    
+    width: 90%;
+    background-color: #B40404;
+    display: flex;
+    justify-content: center;
+    color: white;
 }
 
 .club p{
