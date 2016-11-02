@@ -7,18 +7,24 @@ ob_start();
     <?php
     if (isset($_SESSION['log']) && $_SESSION['Statut'] == 1) {
         ?>
-        <form>
-            <textarea name="editorProgramme" id="editorProgramme">texte a charger/sauvegarder</textarea>
+        <form method="POST">
+            <textarea name="editorProgramme" id="editorProgramme"><?php if(isset($data))
+        {
+            echo $data;
+        }?></textarea>
             <script>CKEDITOR.replace('editorProgramme');</script>
             <div id="editorMenu">
                 <button>Annuler modifications</button>
-                <button>Sauvegarder</button>
+                <button type="submit" name="sauvpro">Sauvegarder</button>
             </div>
         </form>
         <?php
     } else {
         ?>
-        <textarea disabled="true" name="editorProgramme" id="editorProgramme">texte a charger/sauvegarder</textarea>
+        <textarea disabled="true" name="editorProgramme" id="editorProgramme"><?php if(isset($data))
+        {
+            echo $data;
+        }?></textarea>
         <?php
     }
     ?>

@@ -102,12 +102,14 @@ if (isset($_GET['page'])) {
             if(isset($_POST['vuedis']))
             {
                 $View->modifDiscipline($_POST['editorDiscipline']);
+                
             }
- else {
-        $data=$View->afficherDiscipline();
- }
 
-            include('Views/discipline.php');
+        $data=$View->afficherDiscipline();
+        include('Views/discipline.php');
+ 
+
+           
             break;
 
         case 'events' :
@@ -119,6 +121,11 @@ if (isset($_GET['page'])) {
             break;
 
         case 'programme' :
+            if(isset($_POST['sauvpro']))
+            {
+                $View->modifProgramme($_POST['editorProgramme']);
+            }
+            $data=$View->afficherProgramme();
             include('Views/programme.php');
             break;
 

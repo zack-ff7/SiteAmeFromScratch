@@ -13,20 +13,18 @@
  */
 class ViewManager extends Model {
     
-    function afficherAccueil(){
+    function afficherProgramme(){
         
-        $sql='SELECT * FROM vueaccueil;';
+        $sql='SELECT * FROM vueprogramme;';
         $data=  $this->executerRequete($sql);
         $var=$data->fetch();
         return $var['textpage'];
         
     }
     
-    function modifAccueil($texte){
-        $sql='INSERT INTO vueaccueil (textpage) VALUES (?);';
-                $sql2='DELETE FROM vueaccueil;';
-                $this->executerRequete($sql2);
-                $this->executerRequete($sql);
+    function modifProgramme($texte){
+        $sql='UPDATE vueprogramme SET textpage=?';
+                $this->executerRequete($sql,array($texte));
                 return 0;
     }
     
@@ -46,26 +44,7 @@ class ViewManager extends Model {
         return $var['textpage'];
         
     }
-    
-     function afficherContacts(){
-        
-        $sql='SELECT * FROM vuecontact;';
-        $data=  $this->executerRequete($sql);
-        $var=$data->fetch();
-        return $var['textpage'];
-        
-    }
-    
-     
-    function modifContact($texte){
-        $sql='INSERT INTO vuecontact(textpage) VALUES (?);';
-                $sql2='DELETE FROM vuecontact;';
-                $this->executerRequete($sql2);
-                $this->executerRequete($sql);
-                return 0;
-    }
-    
-     
+         
     function modifDiscipline($texte){
         $sql='UPDATE vuediscipline SET textpage=?;';
                       
@@ -75,9 +54,7 @@ class ViewManager extends Model {
     
      
     function modifliens($texte){
-        $sql='INSERT INTO vueliens VALUES (?);';
-                $sql2='DELETE FROM vueliens';
-                $this->executerRequete($sql2);
+        $sql='UPDATE vueliens SET textpage=?';
                 $this->executerRequete($sql,array($texte));
                 return 0;
     }

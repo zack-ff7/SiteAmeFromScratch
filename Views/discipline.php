@@ -8,7 +8,13 @@ ob_start();
     if (isset($_SESSION['log']) && $_SESSION['Statut'] == 1) {
         ?>
     <form method="POST">
-            <textarea name="editorDiscipline" id="editorDiscipline"><?php echo $data?></textarea>
+        
+        
+        
+        <textarea name="editorDiscipline" id="editorDiscipline"><?php if(isset($data))
+        {
+            echo $data;
+        }?></textarea>
             <script>CKEDITOR.replace('editorDiscipline');</script>
             <div id="editorMenu">
                 <button>Annuler modifications</button>
@@ -20,7 +26,10 @@ ob_start();
         <?php
     } else {
         ?>
-        <textarea disabled="true" name="editorDiscipline" id="editorDiscipline"><?php echo $data?></textarea>
+        <textarea disabled="true" name="editorDiscipline" id="editorDiscipline"><?php if(isset($data))
+        {
+            echo $data;
+        }?></textarea>
         <?php
     }
     ?>
