@@ -7,21 +7,7 @@ if(isset($_SESSION['Statut']))
     echo 'Voici les albums photos';
     if(isset($_SESSION['log']))
     {
-        foreach ($lesalbums as $ligne)
-        {
-            echo '<p>'.$ligne['NomAlbum'].'</p>';
-        }
-        echo '<form method="POST"  >';
-        echo '<label>Rajouter un Album</label>';
-        echo '<input type="text" name="lenom"/>';
-        echo '<input type="submit" name="envoyerAlb"/>';
-        echo '</form>';
-        
-        if(isset($message))
-        {
-            echo '<p>'.$message.'</p>';
-        }
-        
+        include('PhotoShow-master/index.php');  
         
     }
     
