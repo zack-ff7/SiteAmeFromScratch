@@ -5,7 +5,7 @@ ob_start();
 <div id="discipline">
 
     <?php
-    if (isset($_SESSION['log']) && $_SESSION['Statut'] == 1) {
+    if (isset($_SESSION['log']) && $_SESSION['Statut'] == 1 && $_SESSION['editorMode']==true) {
         ?>
         <form method="POST">
 
