@@ -1,6 +1,12 @@
 <?php
 
-$title = 'titre du club';
+if($_GET['page']== 'clubs' && isset($_GET['club'])){
+    $title = $_GET['club'];
+}else{
+    $title = 'erreur';
+}
+
+
 ob_start();
 ?>
 <div id="detailClub">

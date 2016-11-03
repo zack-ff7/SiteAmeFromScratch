@@ -12,17 +12,9 @@ ob_start();
                 <?php
             }
             ?>
-
 </div>
 
 <?php
-if (isset($_SESSION['log']) && $_SESSION['Statut'] == 1) {
-    echo '<div id="form_club"><form method="POST">';
-    echo '<label>Nom du nouveau Club<input type="text" name="nom"/>';
-    echo '<input type="submit" value="Valider" name="valider"/>';
-    echo '</form></div>';
-}
-
 $content = ob_get_clean();
 include("Views/layout.php");
 ?>
