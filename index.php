@@ -62,7 +62,7 @@ if (isset($_GET['page'])) {
                         $_SESSION['Statut'] = $res['Statut'];
                         $_SESSION['Nom'] = $res['Nom'];
                         $_SESSION['Prenom'] = $res['Prenom'];
-                        $_SESSION['editorMode'] = False;
+                        $_SESSION['editorMode'] = false;
                         $CONNEXION = true;
                         $STATUT = $_SESSION['Statut'];
                         include('Views/succes.php');

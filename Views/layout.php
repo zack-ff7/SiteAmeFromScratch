@@ -29,11 +29,11 @@
                         }
                         echo '<p class="nameco">Connect&eacute; en<br>tant que :<br>' . $_SESSION['log'] . '</p>';
                     }
-                } else {
+                } }else {
                     echo '<a class="boutonco" href="';
                     echo "index.php?page=connexion";
                     echo '">Connexion</a>';
-                }
+                
             }
                 ?>
             </div>
