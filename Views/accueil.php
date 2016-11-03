@@ -18,8 +18,8 @@ if(isset($_SESSION['Statut'])==1)
                 ?></textarea>
             <script>CKEDITOR.replace('editorAccueil');</script>
             <div id="editorMenu">
-                <button>Annuler modifications</button>
-                <button type="submit" name="vuedis">Sauvegarder</button>
+                
+                <button type="submit" name="vueacc">Sauvegarder</button>
             </div>
         </form>
 

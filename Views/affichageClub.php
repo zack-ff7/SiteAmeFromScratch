@@ -12,7 +12,7 @@ ob_start();
 <div id="detailClub">
 
     <?php
-    if (isset($_SESSION['log']) && $_SESSION['Statut'] == 1) {
+    if (isset($_SESSION['log']) && $_SESSION['Statut'] == 1 && $_SESSION['editorMode']==true) {
         ?>
         <form method="POST">
 
@@ -23,8 +23,7 @@ ob_start();
                 ?></textarea>
             <script>CKEDITOR.replace('editorClub');</script>
             <div id="editorMenu">
-                <button>Annuler modifications</button>
-                <button type="submit" name="vuedis">Sauvegarder</button>
+                <button type="submit" name="btnClub" >Sauvegarder</button>
             </div>
         </form>
 

@@ -14,7 +14,7 @@ ob_start();
         }?></textarea>
             <script>CKEDITOR.replace('editorProgramme');</script>
             <div id="editorMenu">
-                <button>Annuler modifications</button>
+               
                 <button type="submit" name="sauvpro">Sauvegarder</button>
             </div>
         </form>

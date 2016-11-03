@@ -7,12 +7,16 @@ ob_start();
     <?php
     if (isset($_SESSION['log']) && $_SESSION['Statut'] == 1 && $_SESSION['editorMode']==true) {
         ?>
-        <form>
-            <textarea name="editorLiens" id="editorLiens">texte a charger/sauvegarder</textarea>
+        <form method="POST">
+            <textarea name="editorLiens" id="editorLiens"><?php
+                if (isset($data)) {
+                    echo $data;
+                }
+                ?></textarea>
             <script>CKEDITOR.replace('editorLiens');</script>
             <div id="editorMenu">
-                <button>Annuler modifications</button>
-                <button>Sauvegarder</button>
+              
+                <button name="sauvliens" type="submit">Sauvegarder</button>
             </div>
         </form>
 

@@ -10,22 +10,27 @@
  * @author Armand
  */
 class ClubManager extends Model{
-    function nouveauClub($nomClub)
-    {
-        $sql='INSERT INTO club (nom_club) VALUES (?)';
-        $this->executerRequete($sql,array($nomClub));  
-    }
-    
-    function effacerClub($nomClub)
-    {
-        $sql='DELETE FROM club WHERE nom_club=?';
-        $this->executerRequete($sql,array($nomClub));  
-    }
-    
     function afficherClubs()
     {
         $sql='SELECT * FROM club';
         $res=$this->executerRequete($sql);
         return $res;
+    }
+    
+    function ModifClub($club,$texte)
+    {
+        $sql='UPDATE club SET textClub=? WHERE nom_club=? ';
+        $this->executerRequete($sql,array($texte,$club));
+        return 0;
+    
+                
+    }
+    
+    function  afficherTexteClub($club)
+    {
+        $sql='SELECT textClub FROM club WHERE nom_club=?';
+        $res=$this->executerRequete($sql,array($club));
+        $data=$res->fetch();
+        return $data['textClub'];
     }
 }

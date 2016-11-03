@@ -59,6 +59,21 @@ class ViewManager extends Model {
                 return 0;
     }
     
+     function afficherAccueil(){
+        
+        $sql='SELECT * FROM vueaccueil;';
+        $data=  $this->executerRequete($sql);
+        $var=$data->fetch();
+        return $var['textpage'];
+        
+    }
+    
+     function modifAccueil($texte){
+        $sql='UPDATE vueaccueil SET textpage=?';
+                $this->executerRequete($sql,array($texte));
+                return 0;
+    }
+    
     
     
 }

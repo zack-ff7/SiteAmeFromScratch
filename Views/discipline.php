@@ -16,7 +16,7 @@ ob_start();
                 ?></textarea>
             <script>CKEDITOR.replace('editorDiscipline');</script>
             <div id="editorMenu">
-                <button>Annuler modifications</button>
+               
                 <button type="submit" name="vuedis">Sauvegarder</button>
             </div>
         </form>
