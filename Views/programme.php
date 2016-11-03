@@ -5,7 +5,7 @@ ob_start();
 <div id="programme">
 
     <?php
-    if (isset($_SESSION['log']) && $_SESSION['Statut'] == 1) {
+    if (isset($_SESSION['log']) && $_SESSION['Statut'] == 1 && $_SESSION['editorMode']==true) {
         ?>
         <form method="POST">
             <textarea name="editorProgramme" id="editorProgramme"><?php if(isset($data))

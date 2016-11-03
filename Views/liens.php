@@ -5,7 +5,7 @@ ob_start();
 <div id="liens">
 
     <?php
-    if (isset($_SESSION['log']) && $_SESSION['Statut'] == 1) {
+    if (isset($_SESSION['log']) && $_SESSION['Statut'] == 1 && $_SESSION['editorMode']==true) {
         ?>
         <form>
             <textarea name="editorLiens" id="editorLiens">texte a charger/sauvegarder</textarea>
