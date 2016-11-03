@@ -22,7 +22,7 @@
                 if ($_SESSION['Statut'] == 1) {
                     echo '<a class="boutonco" href="index.php?page=administration">Administration</a>';
                     if (isset($_SESSION['editorMode'])) {
-                        if ($_SESSION['editorMode'] == true) {
+                        if ($_SESSION['editorMode'] == false) {
                             echo '<form id="editorFalse" method="POST"><button class="boutonEditorFalse" type="submit" name="btnEditorFalse">Mode edition</button></form>';
                         } else {
                             echo '<form id="editorTrue" method="POST"><button class="boutonEditorTrue" type="submit" name="btnEditorTrue">Mode visiteur</button></form>';
