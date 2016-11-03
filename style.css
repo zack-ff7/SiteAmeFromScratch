@@ -168,6 +168,9 @@ html,body{
 }
 
 .boutonEditorFalse{
+    width: 100%;
+    padding: 4px;
+    margin-top: 10px;
     float: right;
     color: white;
     border: 2px solid black;

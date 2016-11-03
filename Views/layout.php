@@ -21,48 +21,50 @@
                 echo '<a class="boutonco" href="index.php?page=deconnexion">Deconnexion</a>';
                 if ($_SESSION['Statut'] == 1) {
                     echo '<a class="boutonco" href="index.php?page=administration">Administration</a>';
-                    if($_SESSION['editorMode'] == False){
-                        echo '<form id="btnEditorFalse"><button class="boutonEditorFalse" type="submit">Mode edition</button></form>';
-                    }else{
-                        echo '<form id="btnEditorFalse"><button class="boutonEditorTrue" type="submit">Mode visiteur</button></form>';
+                    if (isset($_SESSION['editorMode'])) {
+                        if ($_SESSION['editorMode'] == true) {
+                            echo '<form id="editorFalse" method="POST"><button class="boutonEditorFalse" type="submit" name="btnEditorFalse">Mode edition</button></form>';
+                        } else {
+                            echo '<form id="editorTrue" method="POST"><button class="boutonEditorTrue" type="submit" name="btnEditorTrue">Mode visiteur</button></form>';
+                        }
+                        echo '<p class="nameco">Connect&eacute; en<br>tant que :<br>' . $_SESSION['log'] . '</p>';
                     }
-                    echo '<p class="nameco">Connect&eacute; en<br>tant que :<br>' . $_SESSION['log'] . '</p>';
+                } else {
+                    echo '<a class="boutonco" href="';
+                    echo "index.php?page=connexion";
+                    echo '">Connexion</a>';
                 }
-            } else {
-                echo '<a class="boutonco" href="';
-                echo "index.php?page=connexion";
-                echo '">Connexion</a>';
             }
-            ?>
-        </div>
-
-        <div class="navBar">
-            <div class="navLeft"><img src="assets/images/symbole.png" alt="symbole"><h1>A.M.E</h1></div>
-            <div class="navMenu">
-                <a href="index.php">Accueil</a>
-                <a href="index.php?page=discipline">La Discipline</a>
-                <a href="index.php?page=clubs">Les Clubs</a>
-                <a href="index.php?page=programme">Le Programme</a>
-                <a href="index.php?page=events">Evenements</a>
-                <a href="index.php?page=album">Albums Photo</a>
-                <a href="index.php?page=liens">Liens Utiles</a>
-                <a href="index.php?page=contact">Contact</a>
+                ?>
             </div>
-            <div class="navRight">
-                <form id="formSearch" name="search" method="POST">
-                    <input id="recherche" type="text"/><button id ="search" name="search">Rechercher</button>
-                </form>
-            </div>
-        </div>
 
-        <div class="main">
-            <div class="left-side"></div>
-            <div class="content" id="content"> <?php
-                echo($content);
-                if (isset($script)) {
-                    echo $script;
-                }
-                ?> </div>
+            <div class="navBar">
+                <div class="navLeft"><img src="assets/images/symbole.png" alt="symbole"><h1>A.M.E</h1></div>
+                <div class="navMenu">
+                    <a href="index.php">Accueil</a>
+                    <a href="index.php?page=discipline">La Discipline</a>
+                    <a href="index.php?page=clubs">Les Clubs</a>
+                    <a href="index.php?page=programme">Le Programme</a>
+                    <a href="index.php?page=events">Evenements</a>
+                    <a href="index.php?page=album">Albums Photo</a>
+                    <a href="index.php?page=liens">Liens Utiles</a>
+                    <a href="index.php?page=contact">Contact</a>
+                </div>
+                <div class="navRight">
+                    <form id="formSearch" name="search" method="POST">
+                        <input id="recherche" type="text"/><button id ="search" name="search">Rechercher</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="main">
+                <div class="left-side"></div>
+                <div class="content" id="content"> <?php
+                    echo($content);
+                    if (isset($script)) {
+                        echo $script;
+                    }
+                    ?> </div>
             <div class="right-side"></div>
         </div>
 

@@ -8,8 +8,14 @@ include('Model/ViewManager.php');
 
 $Club = new ClubManager();
 $Us = new UserManager();
-$View=new ViewManager();
+$View = new ViewManager();
 
+if (isset($_POST['btnEditorFalse'])) {
+    $_SESSION['editorMode'] = true;
+}
+if (isset($_POST['btnEditorTrue'])) {
+    $_SESSION['editorMode'] = false;
+}
 
 if (isset($_GET['page'])) {
     switch ($_GET['page']) {
@@ -32,11 +38,10 @@ if (isset($_GET['page'])) {
                         $message = "Les mots de passes ne sont pas identiques";
                         include('Views/creation.php');
                         break;
-                    case 3 : 
+                    case 3 :
                         $message = "Remplissez tous les champs";
                         include('Views/creation.php');
                         break;
-                        
                 }
             } else {
                 include('Views/creation.php');
@@ -86,7 +91,7 @@ if (isset($_GET['page'])) {
                     $Club->nouveauClub($_POST['nom']);
                     $nomVue = 'Views/clubs/' . $_POST['nom'];
                     $lavue = fopen($nomVue, 'x+');
-                    
+
                     fputs($lavue, $str, $length);
                 } else {
                     include('Views/clubs.php');
@@ -99,17 +104,15 @@ if (isset($_GET['page'])) {
             break;
 
         case 'discipline':
-            if(isset($_POST['vuedis']))
-            {
+            if (isset($_POST['vuedis'])) {
                 $View->modifDiscipline($_POST['editorDiscipline']);
-                
             }
 
-        $data=$View->afficherDiscipline();
-        include('Views/discipline.php');
- 
+            $data = $View->afficherDiscipline();
+            include('Views/discipline.php');
 
-           
+
+
             break;
 
         case 'events' :
@@ -121,16 +124,15 @@ if (isset($_GET['page'])) {
             break;
 
         case 'programme' :
-            if(isset($_POST['sauvpro']))
-            {
+            if (isset($_POST['sauvpro'])) {
                 $View->modifProgramme($_POST['editorProgramme']);
             }
-            $data=$View->afficherProgramme();
+            $data = $View->afficherProgramme();
             include('Views/programme.php');
             break;
 
-        case 'album' :   
-            include('Views/albums.php');  
+        case 'album' :
+            include('Views/albums.php');
             break;
         case 'deconnexion':
             include('Views/deconnexion.php');
@@ -149,8 +151,7 @@ if (isset($_GET['page'])) {
             break;
     }
 } else {
-    if(isset($_POST['admin']))
-    {
+    if (isset($_POST['admin'])) {
         include('assets/scriptckeditor.php');
     }
     include('Views/accueil.php');
