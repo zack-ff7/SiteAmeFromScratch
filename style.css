@@ -354,6 +354,14 @@ html,body{
     text-align: center;
 }
 
+#accueil{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
 #discipline{
     display: flex;
     flex-direction: column;
@@ -384,6 +392,14 @@ html,body{
     align-items: center;
     justify-content: center;
     margin-top: 20px;
+}
+
+#editorAccueil{
+    width: 90%;
+    background-color: white;
+    padding: 10px;
+    border-radius: 20px;
+    border: 2px solid black;
 }
 
 #editorDiscipline{

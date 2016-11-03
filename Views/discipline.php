@@ -38,8 +38,5 @@ ob_start();
 <?php
 $content = ob_get_contents();
 ob_end_clean();
-?>
-
-<?php
 include("Views/layout.php");
 ?>
