@@ -17,10 +17,11 @@ class EventManager extends Model{
         return $res;
     }
     
-    function ajouterEvent($titre,$texte,$date,$emmeteur)
+    function ajouterEvent($titre,$texte,$date)
     {
-        $sql='INSERT INTO event(titre,text_event,date_event,nom_emmeteur) VALUES (?,?,?,?)';
-        $this->executerRequete($sql,array($titre,$texte,$date,$emmeteur));  
+        $sql='INSERT INTO event(titre,text_event,date_event) VALUES (?,?,?)';
+        $this->executerRequete($sql,array($titre,$texte,$date)); 
+        return 0;
     }
     
     
