@@ -118,10 +118,8 @@ if (isset($_GET['page'])) {
 
         case 'events' :
             if (isset($_POST['newBillet'])) {
-                $st = 1170288000; //  a timestamp 
-                
                
-                $Event->ajouterEvent($_POST['titleEdit'], $_POST['ContenuEdit'], $dt);
+                $Event->ajouterEvent($_POST['titleEdit'], $_POST['contenuEdit'],$date = date("d-M-Y"));
             }
             $data = $Event->afficherEvents();
             include('Views/events.php');
@@ -151,9 +149,7 @@ if (isset($_GET['page'])) {
             break;
 
         case 'administration':
-            include('Views/administration.php');
-            break;
-        case 'members':
+         
             $var = $Us->allUser(1); //Utlisateurs validés
             $var2 = $Us->allUser(-1); //Utilisateurs non validés
             include ('Views/members.php');

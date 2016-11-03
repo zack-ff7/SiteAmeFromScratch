@@ -16,17 +16,19 @@ if(isset($_SESSION['Statut'])==1)
 }
 if(isset($data))
 {
-    echo '<div id="billet">';
+    
 
 foreach ($data as $ligne)
-{
+{ 
+    echo '<div class="billet">';
     echo $ligne['titre'];
     echo $ligne['text_event'];
     echo $ligne['date_event'];
+    echo '</div>';
 }
 
 
-    echo '</div>';
+    
 }
 $content=  ob_get_clean();
 include("Views/layout.php");
